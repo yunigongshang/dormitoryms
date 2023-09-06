@@ -23,6 +23,7 @@
                 <el-date-picker
                         style="width: 200px"
                         v-model="ruleForm.createDate"
+                        value-format="yyyy-MM-dd"
                         type="date"
                         placeholder="选择日期">
                 </el-date-picker>
