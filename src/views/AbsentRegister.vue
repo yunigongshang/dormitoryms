@@ -19,7 +19,7 @@
             <el-form-item label="原因" prop="reason">
                 <el-input v-model="ruleForm.reason"></el-input>
             </el-form-item>
-            <el-form-item label="联系电话" prop="createDate">
+            <el-form-item label="日期" prop="createDate">
                 <el-date-picker
                         style="width: 200px"
                         v-model="ruleForm.createDate"

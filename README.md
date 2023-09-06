@@ -1,7 +1,6 @@
 # 学习使用
 ## 宿舍管理系统前端文件
 
-# dormitoryms
 
 ## Project setup
 ```
@@ -20,4 +19,3 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# dormitoryms
