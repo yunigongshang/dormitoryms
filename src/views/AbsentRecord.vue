@@ -75,7 +75,7 @@
             return {
                 tableData: null,
                 currentPage: 1,
-                pageSize: 3,
+                pageSize: 5,
                 total: null,
                 key: '',
                 value: '',
@@ -83,7 +83,7 @@
                     key: '',
                     value: '',
                     page: '',
-                    size: 3
+                    size: 5
                 },
                 rules: {
                     key: [
