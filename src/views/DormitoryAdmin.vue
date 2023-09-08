@@ -56,7 +56,7 @@
                     cancelButtonText: '取消',
                     type: 'warning'
                 }).then(function () {
-                    localStorage.removeItem('access-admin')
+                    localStorage.removeItem('dormitoryAdmin')
                     _this.$router.replace({path: '/'})
                 })
             }
