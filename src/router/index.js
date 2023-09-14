@@ -22,6 +22,7 @@ import AbsentRegister from "../views/AbsentRegister";
 
 Vue.use(VueRouter)
 
+
 const routes = [
   {
     path: '/dormitoryAdmin',
@@ -135,6 +136,18 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+router.beforeEach((to, from, next) => {
+  if (to.name!=='登录'){
+    if (localStorage.getItem('systemAdmin')===null && localStorage.getItem('dormitoryAdmin')==null) {
+      next({name: '登录'})
+    } else {
+      next()
+    }
+  }
+  else {
+      next()
+  }
 })
 
 export default router

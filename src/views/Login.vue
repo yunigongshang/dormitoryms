@@ -31,6 +31,8 @@
 </template>
 
 <script>
+    import sl from "element-ui/src/locale/lang/sl";
+
     export default {
         name: "Login",
         data(){
@@ -47,7 +49,20 @@
                 }
             }
         },
-        methods: {
+      mounted() {
+          window.addEventListener('visibilitychange',this.hand);
+      },beforeDestroy() {
+          window.removeEventListener('visibilitychange',this.hand)
+      },
+      methods: {
+          hand(){
+            if (document.visibilityState==='visible' && localStorage.getItem('systemAdmin')!==null){
+                this.$router.push({path: '/dormitoryAdminAdd'})
+              }
+            if (document.visibilityState==='visible' && localStorage.getItem('dormitoryAdmin')!==null){
+             this.$router.push({path: '/absentRegister'})
+            }
+            },
             handleSubmit(){
                 this.$refs.ruleForm.validate((valid) => {
                     if(valid){
